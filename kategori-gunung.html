@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Gunung - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content category-page">
+                <h1 class="category-page-title">Kategori: Gunung</h1>
+
+                <div class="articles-grid" id="articlesGridGunung">
+                    <article class="grid-item">
+                        <a href="artikel-gunung-buthak.html">
+                            <img src="gambar gunung buthak.jpg" alt="Pemandangan Matahari Terbit di Puncak Gunung Buthak">
+                        </a>
+                        <h3><a href="artikel-gunung-buthak.html">Menjelajah Gunung Buthak: Keindahan Alam dan Tantangan Pendakian di Malang</a></h3>
+                        <p class="article-meta">Senin, 17 Juni 2025 | 10:00</p>
+                        <p>Gunung Buthak, dengan ketinggian sekitar 2.868 mdpl, menjadi salah satu destinasi favorit para pendaki di Jawa Timur...</p>
+                        <a href="artikel-gunung-buthak.html" class="read-more-btn">Selengkapnya →</a>
+                    </article>
+                    <article class="grid-item">
+                        <a href="artikel-gunung-kawi.html">
+                            <img src="gambar gunung kawi.jpg" alt="Gunung Kawi">
+                        </a>
+                        <h3><a href="artikel-gunung-kawi.html">Menguak Misteri dan Pesona Spiritual Gunung Kawi di Malang</a></h3>
+                        <p class="article-meta">Senin, 17 Juni 2025 | 11:30</p>
+                        <p>Gunung Kawi bukan hanya tentang keindahan alam, tetapi juga dikenal dengan nilai spiritual dan sejarahnya...</p>
+                        <a href="artikel-gunung-kawi.html" class="read-more-btn">Selengkapnya →</a>
+                    </article>
+                     <article class="grid-item">
+                        <a href="artikel-gunung-panderman.html">
+                            <img src="gambar gunung panderman.jpeg" alt="Gunung Panderman">
+                        </a>
+                        <h3><a href="artikel-gunung-panderman.html">Pendakian Santai dengan Pemandangan Memukau di Gunung Panderman</a></h3>
+                        <p class="article-meta">Senin, 17 Juni 2025 | 12:00</p>
+                        <p>Terletak di kota Batu, Gunung Panderman menawarkan jalur pendakian yang relatif mudah dijangkau...</p>
+                        <a href="artikel-gunung-panderman.html" class="read-more-btn">Selengkapnya →</a>
+                    </article>
+                    <article class="grid-item">
+                        <a href="artikel-gunung-kawinajang.html">
+                            <img src="gambar gunung kawinajang.jpg" alt="Gunung Kawinajang">
+                        </a>
+                        <h3><a href="artikel-gunung-kawinajang.html">Menjelajah Keunikan Gunung Kawinajang: Destinasi Tersembunyi di Malang</a></h3>
+                        <p class="article-meta">Senin, 17 Juni 2025 | 12:30</p>
+                        <p>Gunung Kawinajang mungkin belum sepopuler gunung lain, namun menyimpan keindahan alam yang masih asri...</p>
+                        <a href="artikel-gunung-kawinajang.html" class="read-more-btn">Selengkapnya →</a>
+                    </article>
+                    <article class="grid-item">
+                         <a href="artikel-gunung-bokong.html">
+                            <img src="gambar gunung bokong.jpg" alt="Gunung Bokong">
+                        </a>
+                        <h3><a href="artikel-gunung-bokong.html">Petualangan Singkat ke Puncak Gunung Bokong: Panorama Alam Malang</a></h3>
+                        <p class="article-meta">Senin, 17 Juni 2025 | 13:00</p>
+                        <p>Meskipun namanya unik, Gunung Bokong menawarkan jalur pendakian yang menarik dengan pemandangan...</p>
+                        <a href="artikel-gunung-bokong.html" class="read-more-btn">Selengkapnya →</a>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="categories">
+                    <h4>Kategori</h4>
+                    <ul>
+                        <li><a href="kategori-gunung.html">Gunung</a></li>
+                        <li><a href="kategori-pantai.html">Pantai</a></li>
+                    </ul>
+                </div>
+                <div class="about">
+                    <h4>Tentang</h4>
+                    <p>Jelajahi buah tangan catatan wisata dan jalan-jalan ke tempat-tempat sekitar Malang dan daerah lain. Komentar dan saran silahkan tinggalkan di kontak.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const articlesGrid = document.getElementById('articlesGridGunung');
+            const allArticles = Array.from(articlesGrid.getElementsByClassName('grid-item'));
+
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                allArticles.forEach(article => {
+                    const titleElement = article.querySelector('h3 a');
+                    const paragraphElement = article.querySelector('p:last-of-type');
+
+                    if (titleElement && paragraphElement) {
+                        const titleText = titleElement.textContent.toLowerCase();
+                        const paragraphText = paragraphElement.textContent.toLowerCase();
+
+                        if (titleText.includes(searchTerm) || paragraphText.includes(searchTerm)) {
+                            article.style.display = '';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    }
+                });
+            }
+
+            searchButton.addEventListener('click', performSearch);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    performSearch();
+                }
+            });
+
+            searchInput.addEventListener('input', function() {
+                if (searchInput.value.trim() === '') {
+                    allArticles.forEach(article => {
+                        article.style.display = '';
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

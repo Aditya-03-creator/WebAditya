@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petualangan Singkat ke Puncak Gunung Bokong - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content detail-page">
+                <article>
+                    <h1 class="article-detail-title">Petualangan Singkat ke Puncak Gunung Bokong: Panorama Alam Malang</h1>
+                    <p class="article-meta-detail">Ditulis oleh Senin, 17 Juni 2025 | 13:00</p>
+                    <span class="article-category-badge">Gunung</span>
+                    <img src="gambar gunung bokong.jpg" alt="Pemandangan Gunung Bokong" class="article-main-image">
+                    <div class="article-content">
+                        <p>Gunung Bokong, meskipun namanya unik, menawarkan pengalaman pendakian singkat yang menyegarkan dengan pemandangan alam Malang yang indah. Terletak tidak jauh dari pusat kota, gunung ini cocok untuk petualangan satu hari atau bagi Anda yang memiliki waktu terbatas.</p>
+                        <p>Dengan ketinggian yang tidak terlalu ekstrem, jalur pendakian Gunung Bokong relatif mudah dilalui. Anda akan melewati perbukitan hijau yang menenangkan, dengan udara segar pegunungan yang menyegarkan. Puncak Gunung Bokong menyajikan panorama yang memukau, terutama saat matahari terbit atau terbenam.</p>
+                        <h3>Keindahan Alam dan Aktivitas</h3>
+                         <p>Meskipun pendakiannya singkat, Gunung Bokong tetap menawarkan keindahan alam yang mempesona. Anda bisa menemukan berbagai jenis tumbuhan dan bunga liar di sepanjang jalur. Beberapa titik di gunung ini juga cocok untuk berkemah, jika Anda ingin menikmati suasana malam di alam terbuka.</p>
+                        <p>Selain mendaki, Anda juga bisa melakukan aktivitas lain di sekitar Gunung Bokong, seperti bersepeda gunung atau trekking. Daerah ini memiliki banyak jalur yang menarik untuk dijelajahi. Jangan lupa untuk membawa kamera Anda, karena pemandangan di sini sangat sayang untuk dilewatkan.</p>
+                        <h3>Tips Berkunjung</h3>
+                        <p>Untuk pendakian yang nyaman, gunakan alas kaki yang sesuai dan bawa air minum yang cukup. Meskipun jalurnya relatif mudah, tetap berhati-hati dan perhatikan langkah Anda. Jika Anda berencana untuk berkemah, pastikan Anda membawa perlengkapan yang memadai.</p>
+                        <p>Gunung Bokong adalah pilihan yang tepat bagi Anda yang ingin melarikan diri sejenak dari hiruk pikuk kota dan menikmati keindahan alam Malang. Petualangan singkat namun berkesan menanti Anda di puncak gunung ini.</p>
+                    </div>
+                    <div class="back-button-container">
+                        <a href="index.html" class="back-btn">← Kembali</a>
+                    </div>
+                </article>
+            </section>
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="related-articles">
+                    <h4>Judul Artikel Terkait</h4>
+                    <ul>
+                        <li><a href="artikel-gunung-buthak.html">Menjelajah Gunung Buthak: Keindahan Alam dan Tantangan Pendakian di Malang</a></li>
+                        <li><a href="artikel-gunung-kawi.html">Menguak Misteri dan Pesona Spiritual Gunung Kawi</a></li>
+                        <li><a href="artikel-gunung-panderman.html">Pendakian Santai dengan Pemandangan Memukau di Gunung Panderman</a></li>
+                        <li><a href="artikel-gunung-kawinajang.html">Menjelajah Keunikan Gunung Kawinajang</a></li>
+                        <li><a href="artikel-pantai-ngudel.html">Keindahan Tersembunyi Pantai Ngudel</a></li>
+                        <li><a href="artikel-pantai-teluk-asmoro.html">Menikmati Romantisme Pantai Teluk Asmoro</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+
+            function redirectToSearchPage() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    window.location.href = `index.html`;
+                }
+            }
+
+            searchButton.addEventListener('click', redirectToSearchPage);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    redirectToSearchPage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menguak Misteri dan Pesona Spiritual Gunung Kawi - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content detail-page">
+                <article>
+                    <h1 class="article-detail-title">Menguak Misteri dan Pesona Spiritual Gunung Kawi di Malang</h1>
+                    <p class="article-meta-detail">Ditulis oleh Senin, 17 Juni 2025 | 11:30</p>
+                    <span class="article-category-badge">Gunung</span>
+                    <img src="gambar gunung kawi.jpg" alt="Pemandangan Gunung Kawi" class="article-main-image">
+                    <div class="article-content">
+                        <p>Gunung Kawi bukan hanya tentang keindahan alam, tetapi juga dikenal dengan nilai spiritual dan sejarahnya. Destinasi ini sering dikunjungi untuk tujuan wisata religi dan pencarian berkah, menjadikannya salah satu tempat paling unik di Jawa Timur.</p>
+                        <p>Terletak di Kabupaten Malang, Gunung Kawi menawarkan suasana yang tenang dan damai, jauh dari hiruk pikuk kota. Di sini, Anda akan menemukan banyak tempat pemujaan, klenteng, dan makam keramat yang menjadi pusat kegiatan spiritual. Arsitektur bangunannya yang khas dan ornamen-ornamennya yang detail menambah daya tarik tersendiri.</p>
+                        <h3>Sejarah dan Mitos</h3>
+                        <p>Gunung Kawi erat kaitannya dengan kisah para tokoh spiritual Jawa, terutama Eyang Jugo dan Eyang Sujud, yang makamnya berada di puncak gunung ini. Banyak peziarah datang untuk berdoa dan mencari ketenangan batin, percaya bahwa tempat ini memiliki energi positif yang kuat. Mitos dan legenda yang berkembang di masyarakat turut memperkaya daya tarik Gunung Kawi.</p>
+                        <p>Selain aspek spiritual, Gunung Kawi juga dikelilingi oleh pemandangan alam yang hijau dan asri. Udara pegunungan yang sejuk sangat cocok untuk bersantai atau sekadar berjalan-jalan menikmati keindahan alam sekitarnya. Pohon-pohon rindang dan bunga-bunga yang bermekaran menciptakan suasana yang menenangkan.</p>
+                        <h3>Fasilitas dan Aksesibilitas</h3>
+                        <p>Untuk menunjang kegiatan para peziarah dan wisatawan, di sekitar area Gunung Kawi sudah tersedia berbagai fasilitas seperti penginapan, warung makan, dan toko oleh-oleh. Akses menuju lokasi juga relatif mudah, meskipun jalanan menuju puncak gunung cukup menanjak dan berkelok. Tersedia area parkir yang memadai untuk kendaraan pribadi maupun bus wisata.</p>
+                        <p>Mengunjungi Gunung Kawi adalah pengalaman yang unik, memadukan perjalanan spiritual dengan keindahan alam. Baik Anda mencari ketenangan batin, ingin memahami budaya lokal, atau sekadar menikmati pemandangan, Gunung Kawi menawarkan pengalaman yang tak terlupakan.</p>
+                    </div>
+                    <div class="back-button-container">
+                        <a href="index.html" class="back-btn">← Kembali</a>
+                    </div>
+                </article>
+            </section>
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="related-articles">
+                    <h4>Judul Artikel Terkait</h4>
+                    <ul>
+                        <li><a href="artikel-gunung-buthak.html">Menjelajah Gunung Buthak: Keindahan Alam dan Tantangan Pendakian di Malang</a></li>
+                        <li><a href="artikel-gunung-panderman.html">Pendakian Santai dengan Pemandangan Memukau di Gunung Panderman</a></li>
+                        <li><a href="artikel-gunung-kawinajang.html">Menjelajah Keunikan Gunung Kawinajang</a></li>
+                        <li><a href="artikel-gunung-bokong.html">Petualangan Singkat ke Puncak Gunung Bokong</a></li>
+                        <li><a href="artikel-pantai-ngudel.html">Keindahan Tersembunyi Pantai Ngudel</a></li>
+                        <li><a href="artikel-pantai-teluk-asmoro.html">Menikmati Romantisme Pantai Teluk Asmoro</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+
+            function redirectToSearchPage() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    window.location.href = `index.html`;
+                }
+            }
+
+            searchButton.addEventListener('click', redirectToSearchPage);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    redirectToSearchPage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

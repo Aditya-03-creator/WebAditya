@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content static-page">
+                <h1 class="page-title">Kontak Kami</h1>
+                <p>Kami sangat senang mendengar dari Anda! Jika Anda memiliki pertanyaan, saran, kritik, atau ingin berkolaborasi, jangan ragu untuk menghubungi kami melalui informasi di bawah ini:</p>
+
+                <div class="contact-info">
+                    <h3>Informasi Kontak:</h3>
+                    <ul>
+                        <li><strong>Email:</strong> <a href="mailto:230605110190@student.uin-malang.ac.id">230605110190@student.uin-malang.ac.id</a></li>
+                        <li><strong>Telepon:</strong> +62 813-2604-7547 (WhatsApp)</li>
+                        <li><strong>Media Sosial:</strong></li>
+                        <ul>
+                            <li><a href="#" target="_blank">Instagram: @adityadzkyyl</a></li>
+                        </ul>
+                    </ul>
+                </div>
+
+                <p>Kami akan berusaha merespons pesan Anda secepat mungkin. Terima kasih atas dukungan dan minat Anda pada blog Jalan Santai!</p>
+            </section>
+
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="categories">
+                    <h4>Kategori</h4>
+                    <ul>
+                        <li><a href="kategori-gunung.html">Gunung</a></li>
+                        <li><a href="kategori-pantai.html">Pantai</a></li>
+                    </ul>
+                </div>
+                <div class="about">
+                    <h4>Tentang</h4>
+                    <p>Jelajahi buah tangan catatan wisata dan jalan-jalan ke tempat-tempat sekitar Malang dan daerah lain. Komentar dan saran silahkan tinggalkan di kontak.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+
+            function redirectToSearchPage() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    window.location.href = `index.html`;
+                }
+            }
+
+            searchButton.addEventListener('click', redirectToSearchPage);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    redirectToSearchPage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

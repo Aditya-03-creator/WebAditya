@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendakian Santai dengan Pemandangan Memukau di Gunung Panderman - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content detail-page">
+                <article>
+                    <h1 class="article-detail-title">Pendakian Santai dengan Pemandangan Memukau di Gunung Panderman</h1>
+                    <p class="article-meta-detail">Ditulis oleh Senin, 17 Juni 2025 | 12:00</p>
+                    <span class="article-category-badge">Gunung</span>
+                    <img src="gambar gunung panderman.jpeg" alt="Pemandangan Gunung Panderman" class="article-main-image">
+                    <div class="article-content">
+                        <p>Terletak di kota Batu, Gunung Panderman menawarkan jalur pendakian yang relatif mudah dijangkau, cocok untuk pemula atau Anda yang ingin menikmati pendakian santai. Meskipun ketinggiannya tidak setinggi gunung-gunung lain di Jawa Timur, Panderman menyajikan pemandangan alam yang memukau, terutama lanskap kota Batu dari puncaknya.</p>
+                        <p>Pendakian Gunung Panderman dapat dimulai dari beberapa pos, salah satunya yang populer adalah melalui Desa Toyomerto. Jalur ini dikenal cukup ramah bagi pendaki pemula, dengan medan yang tidak terlalu terjal dan pemandangan hutan pinus yang menyejukkan. Sepanjang perjalanan, Anda akan disuguhi udara segar pegunungan dan suara alam yang menenangkan.</p>
+                        <h3>Pesona Puncak dan Keindahan Malam</h3>
+                        <p>Puncak Gunung Panderman, sering disebut juga Puncak Basundara, menawarkan pemandangan 360 derajat yang luar biasa. Anda bisa melihat hamparan kota Batu dengan lampu-lampunya yang berkelap-kelip di malam hari, serta siluet gunung-gunung lain seperti Gunung Arjuno dan Welirang di kejauhan. Momen matahari terbit atau terbenam di puncak adalah pengalaman yang tak terlupakan.</p>
+                        <p>Bagi yang ingin merasakan pengalaman lebih, camping di area puncak Panderman menjadi pilihan menarik. Anda bisa menikmati keindahan langit malam bertabur bintang yang jarang terlihat di kota, serta merasakan ketenangan alam yang sesungguhnya.</p>
+                        <h3>Tips Pendakian</h3>
+                        <p>Meskipun jalur Panderman tergolong mudah, persiapan tetap diperlukan. Gunakan sepatu trekking yang nyaman, bawa air minum dan camilan secukupnya, serta kenakan pakaian yang sesuai dengan cuaca pegunungan. Jangan lupa membawa jaket karena suhu di puncak bisa sangat dingin, terutama di malam hari.</p>
+                        <p>Gunung Panderman adalah pilihan ideal bagi Anda yang mencari petualangan singkat namun tetap ingin menikmati keindahan alam pegunungan. Ini adalah destinasi yang sempurna untuk mengisi akhir pekan Anda dengan kegiatan yang menyegarkan jiwa dan raga.</p>
+                    </div>
+                    <div class="back-button-container">
+                        <a href="index.html" class="back-btn">← Kembali</a>
+                    </div>
+                </article>
+            </section>
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="related-articles">
+                    <h4>Judul Artikel Terkait</h4>
+                    <ul>
+                        <li><a href="artikel-gunung-buthak.html">Menjelajah Gunung Buthak: Keindahan Alam dan Tantangan Pendakian di Malang</a></li>
+                        <li><a href="artikel-gunung-kawi.html">Menguak Misteri dan Pesona Spiritual Gunung Kawi</a></li>
+                        <li><a href="artikel-gunung-kawinajang.html">Menjelajah Keunikan Gunung Kawinajang</a></li>
+                        <li><a href="artikel-gunung-bokong.html">Petualangan Singkat ke Puncak Gunung Bokong</a></li>
+                        <li><a href="artikel-pantai-ngudel.html">Keindahan Tersembunyi Pantai Ngudel</a></li>
+                        <li><a href="artikel-pantai-teluk-asmoro.html">Menikmati Romantisme Pantai Teluk Asmoro</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+
+            function redirectToSearchPage() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    window.location.href = `index.html`;
+                }
+            }
+
+            searchButton.addEventListener('click', redirectToSearchPage);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    redirectToSearchPage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

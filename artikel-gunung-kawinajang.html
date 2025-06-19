@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menjelajah Keunikan Gunung Kawinajang - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content detail-page">
+                <article>
+                    <h1 class="article-detail-title">Menjelajah Keunikan Gunung Kawinajang: Destinasi Tersembunyi di Malang</h1>
+                    <p class="article-meta-detail">Ditulis oleh Senin, 17 Juni 2025 | 12:30</p>
+                    <span class="article-category-badge">Gunung</span>
+                    <img src="gambar gunung kawinajang.jpg" alt="Pemandangan Gunung Kawinajang" class="article-main-image">
+                    <div class="article-content">
+                        <p>Gunung Kawinajang mungkin belum sepopuler gunung-gunung lain di Malang, namun menyimpan keindahan alam yang masih asri dan tenang. Bagi Anda yang mencari ketenangan dan pengalaman pendakian yang berbeda, gunung ini bisa menjadi pilihan menarik.</p>
+                        <p>Terletak di kawasan yang masih relatif belum tersentuh, Gunung Kawinajang menawarkan jalur pendakian yang melalui hutan tropis yang lebat dan pemandangan perbukitan hijau yang memanjakan mata. Udara segar dan jauh dari keramaian kota menjadikan setiap langkah pendakian terasa lebih menyegarkan.</p>
+                        <h3>Pesona Tersembunyi dan Keanekaragaman Hayati</h3>
+                        <p>Keunikan Gunung Kawinajang terletak pada pesonanya yang masih alami. Anda mungkin akan menjumpai berbagai jenis flora dan fauna lokal yang masih hidup bebas di habitat aslinya. Suara kicauan burung dan gemericik air sungai kecil akan menemani perjalanan Anda.</p>
+                        <p>Meskipun infrastruktur mungkin tidak selengkap gunung populer, justru inilah yang menjadi daya tarik bagi petualang sejati. Puncaknya mungkin tidak memiliki pemandangan yang spektakuler seperti gunung berapi besar, namun keindahan perbukitan dan suasana yang tenang adalah nilai lebih dari Kawinajang.</p>
+                        <h3>Persiapan dan Rekomendasi</h3>
+                        <p>Karena fasilitas di sekitar Gunung Kawinajang masih terbatas, disarankan untuk mempersiapkan segala sesuatunya dengan matang. Bawa perbekalan yang cukup, termasuk air minum, makanan, dan perlengkapan P3K. Gunakan pakaian dan alas kaki yang nyaman untuk trekking.</p>
+                        <p>Jika Anda tertarik untuk menjelajahi Gunung Kawinajang, sebaiknya ajak teman atau gunakan jasa pemandu lokal yang memahami jalur. Ini akan membuat petualangan Anda lebih aman dan menyenangkan. Nikmati keunikan dan ketenangan di salah satu destinasi tersembunyi Malang ini!</p>
+                    </div>
+                    <div class="back-button-container">
+                        <a href="index.html" class="back-btn">← Kembali</a>
+                    </div>
+                </article>
+            </section>
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="related-articles">
+                    <h4>Judul Artikel Terkait</h4>
+                    <ul>
+                        <li><a href="artikel-gunung-buthak.html">Menjelajah Gunung Buthak: Keindahan Alam dan Tantangan Pendakian di Malang</a></li>
+                        <li><a href="artikel-gunung-kawi.html">Menguak Misteri dan Pesona Spiritual Gunung Kawi</a></li>
+                        <li><a href="artikel-gunung-panderman.html">Pendakian Santai dengan Pemandangan Memukau di Gunung Panderman</a></li>
+                        <li><a href="artikel-gunung-bokong.html">Petualangan Singkat ke Puncak Gunung Bokong</a></li>
+                        <li><a href="artikel-pantai-ngudel.html">Keindahan Tersembunyi Pantai Ngudel</a></li>
+                        <li><a href="artikel-pantai-teluk-asmoro.html">Menikmati Romantisme Pantai Teluk Asmoro</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+
+            function redirectToSearchPage() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    window.location.href = `index.html`;
+                }
+            }
+
+            searchButton.addEventListener('click', redirectToSearchPage);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    redirectToSearchPage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

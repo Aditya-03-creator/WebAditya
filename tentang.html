@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content static-page">
+                <h1 class="page-title">Tentang Kami</h1>
+                <p>Selamat datang di blog **Jalan Santai**! Kami adalah platform sederhana yang didedikasikan untuk berbagi catatan perjalanan, pengalaman wisata, dan informasi menarik seputar destinasi di Indonesia, khususnya di sekitar Malang dan daerah lainnya.</p>
+                <p>Mulai dari petualangan mendaki gunung, menikmati keindahan pantai, hingga menjelajahi tempat-tempat wisata unik, kami berkomitmen untuk menyajikan konten yang informatif dan menginspirasi Anda untuk berpetualang.</p>
+                <p>Kami percaya bahwa setiap perjalanan memiliki cerita uniknya sendiri. Melalui blog ini, kami berharap dapat menjadi sumber inspirasi bagi Anda untuk menemukan tempat-tempat baru, merencanakan perjalanan impian Anda, atau sekadar menikmati cerita-cerita petualangan dari kenyamanan rumah Anda.</p>
+                <p>Terima kasih telah berkunjung ke Jalan Santai. Jangan ragu untuk menjelajahi artikel-artikel kami dan bagikan pengalaman Anda di kolom komentar atau melalui halaman kontak kami.</p>
+                <p>Salam Petualang,</p>
+                <p>Tim Jalan Santai</p>
+            </section>
+
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="categories">
+                    <h4>Kategori</h4>
+                    <ul>
+                        <li><a href="kategori-gunung.html">Gunung</a></li>
+                        <li><a href="kategori-pantai.html">Pantai</a></li>
+                    </ul>
+                </div>
+                <div class="about">
+                    <h4>Tentang</h4>
+                    <p>Jelajahi buah tangan catatan wisata dan jalan-jalan ke tempat-tempat sekitar Malang dan daerah lain. Komentar dan saran silahkan tinggalkan di kontak.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+
+            function redirectToSearchPage() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    window.location.href = `index.html`;
+                }
+            }
+
+            searchButton.addEventListener('click', redirectToSearchPage);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    redirectToSearchPage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

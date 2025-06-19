@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keindahan Tersembunyi Pantai Ngudel - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content detail-page">
+                <article>
+                    <h1 class="article-detail-title">Keindahan Tersembunyi Pantai Ngudel: Spot Fotografi Favorit di Malang Selatan</h1>
+                    <p class="article-meta-detail">Ditulis oleh Senin, 17 Juni 2025 | 13:30</p>
+                    <span class="article-category-badge">Pantai</span>
+                    <img src="gambar pantai ngudel.jpg" alt="Pemandangan Pantai Ngudel" class="article-main-image">
+                    <div class="article-content">
+                        <p>Malang Selatan memang tak pernah kehabisan pesona pantai. Salah satunya adalah Pantai Ngudel, sebuah mutiara tersembunyi yang menawarkan keindahan alam luar biasa dan menjadi surga bagi para pecinta fotografi. Terletak di Dusun Ngudel, Desa Sindurejo, Kecamatan Gedangan, pantai ini siap memukau setiap pengunjungnya.</p>
+                        <p>Keunikan Pantai Ngudel terletak pada tebing-tebing karang yang menjulang tinggi mengelilingi garis pantai, menciptakan pemandangan dramatis nan eksotis. Pasir putihnya yang lembut berpadu sempurna dengan birunya air laut yang jernih, mengundang siapa saja untuk bermain air atau sekadar bersantai menikmati deburan ombak.</p>
+                        <h3>Pesona Alam dan Spot Foto Instagramable</h3>
+                        <p>Pantai ini sangat terkenal di kalangan fotografer karena keindahan lanskapnya. Bentuk tebing-tebing yang unik, ombak yang menghantam karang, serta hijaunya pepohonan di sekitarnya, menjadi komposisi sempurna untuk diabadikan. Terlebih saat matahari terbit atau terbenam, langit jingga keemasan akan menjadi latar belakang yang magis.</p>
+                        <p>Selain pemandangan utamanya, ada juga beberapa spot menarik lainnya seperti sebuah bukit kecil di sisi barat yang bisa didaki untuk mendapatkan sudut pandang lebih luas. Dari atas bukit ini, seluruh keindahan Pantai Ngudel akan terlihat jelas, sangat ideal untuk foto panorama.</p>
+                        <h3>Aktivitas dan Tips Berkunjung</h3>
+                        <p>Pengunjung bisa melakukan berbagai aktivitas di Pantai Ngudel, mulai dari berjemur, bermain pasir, berenang (dengan tetap memperhatikan ombak), hingga camping di area yang telah disediakan. Suasana pantai yang tenang dan belum terlalu ramai menjadikannya tempat yang sempurna untuk melepas penat.</p>
+                        <p>Untuk mencapai Pantai Ngudel, Anda akan melewati jalur yang berkelok dan sedikit menantang, namun kondisi jalan sudah cukup baik. Disarankan menggunakan kendaraan pribadi karena minimnya transportasi umum. Jangan lupa membawa perbekalan yang cukup, termasuk air minum dan makanan, karena fasilitas di sekitar pantai masih terbatas.</p>
+                        <p>Pantai Ngudel adalah bukti bahwa Malang Selatan masih menyimpan banyak keindahan alam yang menunggu untuk dijelajahi. Jadi, siapkan kamera Anda dan nikmati keajaiban tersembunyi ini!</p>
+                    </div>
+                    <div class="back-button-container">
+                        <a href="index.html" class="back-btn">← Kembali</a>
+                    </div>
+                </article>
+            </section>
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="related-articles">
+                    <h4>Judul Artikel Terkait</h4>
+                    <ul>
+                        <li><a href="artikel-gunung-buthak.html">Menjelajah Gunung Buthak: Keindahan Alam dan Tantangan Pendakian di Malang</a></li>
+                        <li><a href="artikel-gunung-kawi.html">Menguak Misteri dan Pesona Spiritual Gunung Kawi</a></li>
+                        <li><a href="artikel-gunung-panderman.html">Pendakian Santai dengan Pemandangan Memukau di Gunung Panderman</a></li>
+                        <li><a href="artikel-gunung-kawinajang.html">Menjelajah Keunikan Gunung Kawinajang</a></li>
+                        <li><a href="artikel-gunung-bokong.html">Petualangan Singkat ke Puncak Gunung Bokong</a></li>
+                        <li><a href="artikel-pantai-teluk-asmoro.html">Menikmati Romantisme Pantai Teluk Asmoro</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+
+            function redirectToSearchPage() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    window.location.href = `index.html`;
+                }
+            }
+
+            searchButton.addEventListener('click', redirectToSearchPage);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    redirectToSearchPage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

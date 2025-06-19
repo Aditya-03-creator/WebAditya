@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Pantai - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content category-page">
+                <h1 class="category-page-title">Kategori: Pantai</h1>
+
+                <div class="articles-grid" id="articlesGridPantai">
+                    <article class="grid-item">
+                        <a href="artikel-pantai-ngudel.html">
+                            <img src="gambar pantai ngudel.jpg" alt="Pantai Ngudel">
+                        </a>
+                        <h3><a href="artikel-pantai-ngudel.html">Keindahan Tersembunyi Pantai Ngudel: Spot Fotografi Favorit di Malang Selatan</a></h3>
+                        <p class="article-meta">Senin, 17 Juni 2025 | 13:30</p>
+                        <p>Pantai Ngudel memukau dengan tebing-tebing karang yang menjulang tinggi dan pasir putihnya yang bersih. Sangat cocok untuk bersantai dan berburu foto...</p>
+                        <a href="artikel-pantai-ngudel.html" class="read-more-btn">Selengkapnya →</a>
+                    </article>
+
+                    <article class="grid-item">
+                        <a href="artikel-pantai-teluk-asmoro.html">
+                            <img src="gambar pantai telukasmoro.jpg" alt="Pantai Teluk Asmoro">
+                        </a>
+                        <h3><a href="artikel-pantai-teluk-asmoro.html">Menikmati Romantisme Pantai Teluk Asmoro: Mutiara Tersembunyi di Malang</a></h3>
+                        <p class="article-meta">Senin, 17 Juni 2025 | 14:00</p>
+                        <p>Dikenal sebagai "Raja Ampat-nya Malang", Pantai Teluk Asmoro menawarkan gugusan pulau-pulau kecil dengan air laut yang jernih. Cocok untuk snorkeling dan camping...</p>
+                        <a href="artikel-pantai-teluk-asmoro.html" class="read-more-btn">Selengkapnya →</a>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="categories">
+                    <h4>Kategori</h4>
+                    <ul>
+                        <li><a href="kategori-gunung.html">Gunung</a></li>
+                        <li><a href="kategori-pantai.html">Pantai</a></li>
+                    </ul>
+                </div>
+                <div class="about">
+                    <h4>Tentang</h4>
+                    <p>Jelajahi buah tangan catatan wisata dan jalan-jalan ke tempat-tempat sekitar Malang dan daerah lain. Komentar dan saran silahkan tinggalkan di kontak.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const articlesGrid = document.getElementById('articlesGridPantai');
+            const allArticles = Array.from(articlesGrid.getElementsByClassName('grid-item'));
+
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                allArticles.forEach(article => {
+                    const titleElement = article.querySelector('h3 a');
+                    const paragraphElement = article.querySelector('p:last-of-type');
+
+                    if (titleElement && paragraphElement) {
+                        const titleText = titleElement.textContent.toLowerCase();
+                        const paragraphText = paragraphElement.textContent.toLowerCase();
+
+                        if (titleText.includes(searchTerm) || paragraphText.includes(searchTerm)) {
+                            article.style.display = '';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    }
+                });
+            }
+
+            searchButton.addEventListener('click', performSearch);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    performSearch();
+                }
+            });
+
+            searchInput.addEventListener('input', function() {
+                if (searchInput.value.trim() === '') {
+                    allArticles.forEach(article => {
+                        article.style.display = '';
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

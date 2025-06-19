@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menjelajah Gunung Buthak - Jalan Santai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="blog-title">
+                <h1>Selamat Datang di Blog Kami!</h1>
+                <p>Blog Catatan Wisata dan Jalan-jalan</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <section class="main-content detail-page">
+                <article>
+                    <h1 class="article-detail-title">Menjelajah Gunung Buthak: Keindahan Alam dan Tantangan Pendakian di Malang</h1>
+                    <p class="article-meta-detail">Ditulis oleh Senin, 17 Juni 2025 | 10:00</p>
+                    <span class="article-category-badge">Gunung</span>
+                    <img src="gambar gunung buthak.jpg" alt="Pemandangan Matahari Terbit di Puncak Gunung Buthak" class="article-main-image">
+                    <div class="article-content">
+                        <p>Gunung Buthak, dengan ketinggian sekitar 2.868 mdpl, menjadi salah satu destinasi favorit para pendaki di Jawa Timur. Terletak di perbatasan Malang dan Batu, gunung ini menawarkan pemandangan alam yang memukau, mulai dari hutan pinus yang lebat hingga sabana yang luas. Jalur pendakian yang menantang namun reward yang sepadan dengan keindahan puncaknya membuat Buthak selalu ramai dikunjungi, terutama di musim pendakian.</p>
+                        <p>Salah satu daya tarik utama Gunung Buthak adalah pemandangan matahari terbitnya yang spektakuler. Dari puncaknya, Anda bisa menyaksikan lautan awan yang membentang luas, dengan puncak-puncak gunung lain seperti Welirang dan Arjuno yang menembus awan. Keindahan ini sering menjadi alasan utama para pendaki rela memulai perjalanan sejak dini hari.</p>
+                        <h3>Jalur Pendakian dan Fasilitas</h3>
+                        <p>Ada beberapa jalur pendakian menuju Gunung Buthak, salah satunya yang populer adalah via Panderman atau via Sumberbrantas. Masing-masing jalur memiliki karakteristik dan tingkat kesulitan yang berbeda. Meskipun demikian, jalur-jalur tersebut umumnya terawat dan terdapat beberapa pos peristirahatan yang bisa digunakan pendaki untuk beristirahat.</p>
+                        <p>Fasilitas di area basecamp mungkin terbatas, sehingga disarankan untuk mempersiapkan segala kebutuhan pendakian dari kota. Pastikan membawa perlengkapan standar mendaki, logistik yang cukup, serta air bersih. Cuaca di gunung bisa berubah sewaktu-waktu, jadi selalu periksa prakiraan cuaca sebelum mendaki dan bawa pakaian hangat.</p>
+                        <h3>Konservasi Alam dan Etika Pendakian</h3>
+                        <p>Sebagai bagian dari upaya konservasi, penting bagi setiap pendaki untuk mematuhi aturan dan menjaga kebersihan lingkungan. Jangan membuang sampah sembarangan dan usahakan membawa kembali semua sampah Anda. Hormati flora dan fauna lokal, serta jangan merusak ekosistem gunung.</p>
+                        <p>Menjelajahi Gunung Buthak bukan hanya tentang menaklukkan puncak, tetapi juga tentang menikmati keindahan alam yang luar biasa dan belajar menghargai lingkungan. Pengalaman mendaki Buthak akan menjadi kenangan yang tak terlupakan bagi setiap petualang.</p>
+                    </div>
+                    <div class="back-button-container">
+                        <a href="index.html" class="back-btn">← Kembali</a>
+                    </div>
+                </article>
+            </section>
+            <aside class="sidebar">
+                <div class="search-box">
+                    <h4>Pencarian</h4>
+                    <input type="text" id="searchInput" placeholder="Masukkan kata kunci...">
+                    <button id="searchButton">Go!</button>
+                </div>
+                <div class="related-articles">
+                    <h4>Judul Artikel Terkait</h4>
+                    <ul>
+                        <li><a href="artikel-gunung-kawi.html">Menguak Misteri dan Pesona Spiritual Gunung Kawi</a></li>
+                        <li><a href="artikel-gunung-panderman.html">Pendakian Santai dengan Pemandangan Memukau di Gunung Panderman</a></li>
+                        <li><a href="artikel-gunung-kawinajang.html">Menjelajah Keunikan Gunung Kawinajang</a></li>
+                        <li><a href="artikel-gunung-bokong.html">Petualangan Singkat ke Puncak Gunung Bokong</a></li>
+                        <li><a href="artikel-pantai-ngudel.html">Keindahan Tersembunyi Pantai Ngudel</a></li>
+                        <li><a href="artikel-pantai-teluk-asmoro.html">Menikmati Romantisme Pantai Teluk Asmoro</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © Jalan Santai 2025</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+
+            function redirectToSearchPage() {
+                const searchTerm = searchInput.value.trim();
+                if (searchTerm) {
+                    window.location.href = `index.html?search=${encodeURIComponent(searchTerm)}`;
+                } else {
+                    window.location.href = `index.html`;
+                }
+            }
+
+            searchButton.addEventListener('click', redirectToSearchPage);
+
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    redirectToSearchPage();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
